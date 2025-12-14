@@ -7,16 +7,16 @@ This repository contains two embedded systems projects developed as part of a **
 A comprehensive simulation of a smart car's control system. This project manages engine states, automates safety features, and monitors environmental conditions using non-blocking logic.
 
 ### Key Features
-* [cite_start]**Engine Control:** Master button to start/stop the system with visual status feedback (RGB LCD)[cite: 31, 192].
+* **Engine Control:** Master button to start/stop the system with visual status feedback (RGB LCD).
 * **Safety Monitoring:**
-    * [cite_start]**Seatbelt Alarm:** Triggers a specific buzzer alert if the seatbelt isn't fastened within 10 seconds of starting the engine[cite: 39, 199].
-    * [cite_start]**Obstacle Detection:** Ultrasonic sensor measures distance (0-50cm) and adjusts buzzer frequency dynamically (closer = faster beeping)[cite: 76, 202].
-* [cite_start]**Lighting Automation:** Headlights activate automatically in low-light conditions, with a manual override via potentiometer[cite: 66, 195].
-* [cite_start]**Security Mode:** When the engine is OFF, a PIR motion sensor detects intruders and triggers a security LED sequence[cite: 34, 203].
-* [cite_start]**Engine Health:** Monitors temperature via DHT11; alerts the driver if overheating occurs (>30°C)[cite: 85, 206].
+    * **Seatbelt Alarm:** Triggers a specific buzzer alert if the seatbelt isn't fastened within 10 seconds of starting the engine.
+    * **Obstacle Detection:** Ultrasonic sensor measures distance (0-50cm) and adjusts buzzer frequency dynamically (closer = faster beeping).
+* **Lighting Automation:** Headlights activate automatically in low-light conditions, with a manual override via potentiometer.
+* **Security Mode:** When the engine is OFF, a PIR motion sensor detects intruders and triggers a security LED sequence.
+* **Engine Health:** Monitors temperature via DHT11; alerts the driver if overheating occurs (>30°C).
 
 ### ⚡ Technical Highlight: Non-Blocking Code
-Unlike basic Arduino sketches, this project avoids `delay()` for sensor management. [cite_start]It utilizes `millis()` timers to handle the buzzer, LCD updates, and sensor readings simultaneously, ensuring the "Stop" button remains responsive at all times[cite: 43, 62].
+Unlike basic Arduino sketches, this project avoids `delay()` for sensor management. It utilizes `millis()` timers to handle the buzzer, LCD updates, and sensor readings simultaneously, ensuring the "Stop" button remains responsive at all times.
 
 ### 🔌 Pinout Configuration
 | Component | Pin | Type |
@@ -42,10 +42,10 @@ A multi-output weather monitoring station that aggregates sensor data to predict
 
 ### Key Features
 * **Multi-Display Output:**
-    * [cite_start]**4-Digit Display:** Cycles through Time (simulated), Temperature, and Humidity sequentially[cite: 130, 215].
-    * [cite_start]**RGB LCD:** Displays the calculated "Weather State" with color-coded backgrounds (e.g., Red for Hot/Humid, Blue for Cold/Rain)[cite: 137, 217].
-* [cite_start]**Weather Prediction Logic:** Analyzes data from a **Barometer (BMP280)** and **DHT11** to categorize weather into states: *Hot & Humid*, *Cold/Rain*, or *Normal*[cite: 133, 217].
-* [cite_start]**Visual Alerts:** A status LED blinks at different frequencies depending on the severity of the weather condition[cite: 141, 219].
+    * **4-Digit Display:** Cycles through Time (simulated), Temperature, and Humidity sequentially.
+    * **RGB LCD:** Displays the calculated "Weather State" with color-coded backgrounds (e.g., Red for Hot/Humid, Blue for Cold/Rain).
+* **Weather Prediction Logic:** Analyzes data from a **Barometer (BMP280)** and **DHT11** to categorize weather into states: *Hot & Humid*, *Cold/Rain*, or *Normal*.
+* **Visual Alerts:** A status LED blinks at different frequencies depending on the severity of the weather condition.
 
 ### 🔌 Pinout Configuration
 | Component | Pin | Type |
